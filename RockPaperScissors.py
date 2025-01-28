@@ -6,17 +6,16 @@ def rock_paper_scissors():
     print("Options: rock, paper, scissors")
 
     while True:
-        # User input
+   
         user_choice = input("Enter your choice (rock/paper/scissors): ").strip().lower()
         if user_choice not in options:
             print("Invalid choice. Please try again.")
             continue
 
-        # Computer choice
         computer_choice = random.choice(options)
         print(f"Computer chose: {computer_choice}")
 
-        # Determine the winner
+     
         if user_choice == computer_choice:
             print("It's a draw! Try again.")
         elif (user_choice == "rock" and computer_choice == "scissors") or \
@@ -27,6 +26,4 @@ def rock_paper_scissors():
         else:
             print("Computer wins! 💻")
             break
-
-# Run the game
 rock_paper_scissors()
